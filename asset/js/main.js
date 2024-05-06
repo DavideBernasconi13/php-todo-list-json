@@ -47,11 +47,11 @@ createApp({
         getData() {
             axios.get(this.apiUrl).then((res) => {
                 this.todolist = res.data;
-                console.log(this.todolist)
+                console.log(res.data);
             })
         }
     },
     created() {
-        this.getData()
+        this.getData();
     }
 }).mount('#app');

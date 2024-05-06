@@ -1,8 +1,11 @@
 <?php
-$todolist = file_get_contents('data.json');
-// $todolist = json_decode($content, true);
-// var_dump($todolist);
-// var_dump($content);
-header('Content-type: application/json');
+$content = file_get_contents('data.json');
+//var_dump($content);
+$todolist = json_decode($content, true);
+$print = json_encode($todolist);
+//echo $print;
+echo $print;
 
-//echo $todolist;
+
+
+header('Content-type: application/json');
