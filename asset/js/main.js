@@ -1,11 +1,10 @@
-import { todolist } from "./data.js";
-
 const { createApp } = Vue;
 
 createApp({
     data() {
         return {
-            todolist: todolist
+            todolist: [],
+            apiUrl: "server.php",
         }
     },
     methods: {
@@ -44,8 +43,10 @@ createApp({
             //ripulisco itemText
             this.itemText = '';
             console.log(this.todolist);
-        }
+        },
+        getData() {
 
+        }
     },
     mounted() {
         console.log(todolist)
