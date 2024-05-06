@@ -45,10 +45,13 @@ createApp({
             console.log(this.todolist);
         },
         getData() {
-
+            axios.get(this.apiUrl).then((res) => {
+                this.todolist = res.data;
+                console.log(this.todolist)
+            })
         }
     },
-    mounted() {
-        console.log(todolist)
+    created() {
+        this.getData()
     }
 }).mount('#app');
